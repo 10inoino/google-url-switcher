@@ -1,64 +1,66 @@
 {
   chrome.runtime.onInstalled.addListener(() => {
-    chrome.contextMenus.create({
-      id: 'new',
-      title: 'New',
-    });
-    chrome.contextMenus.create({
-      id: 'new_docs',
-      parentId: 'new',
-      title: 'New Docs',
-    });
-    chrome.contextMenus.create({
-      id: 'new_sheet',
-      parentId: 'new',
-      title: 'New SpreadSheet',
-    });
-    chrome.contextMenus.create({
-      id: 'new_slide',
-      parentId: 'new',
-      title: 'New Slide',
-    });
-    chrome.contextMenus.create({
-      id: 'new_form',
-      parentId: 'new',
-      title: 'New Form',
-    });
-
-    chrome.contextMenus.create({
-      id: 'convert',
-      title: 'Convert',
-    });
-    chrome.contextMenus.create({
-      id: 'convert_to_preview',
-      parentId: 'convert',
-      title: 'To Preview',
-    });
-    chrome.contextMenus.create({
-      id: 'convert_to_edit',
-      parentId: 'convert',
-      title: 'To Edit',
-    });
-    chrome.contextMenus.create({
-      id: 'convert_to_copy',
-      parentId: 'convert',
-      title: 'To Copy',
-    });
-    chrome.contextMenus.create({
-      id: 'convert_to_template',
-      parentId: 'convert',
-      title: 'To Template',
-    });
-
-    chrome.contextMenus.create({
-      id: 'download_link',
-      title: 'Download Link',
-    });
-    chrome.contextMenus.create({
-      id: 'download_pdf',
-      parentId: 'download_link',
-      title: 'PDF',
-    });
+    chrome.contextMenus.removeAll(function() {
+      chrome.contextMenus.create({
+        id: 'new',
+        title: 'New',
+      });
+      chrome.contextMenus.create({
+        id: 'new_docs',
+        parentId: 'new',
+        title: 'New Docs',
+      });
+      chrome.contextMenus.create({
+        id: 'new_sheet',
+        parentId: 'new',
+        title: 'New SpreadSheet',
+      });
+      chrome.contextMenus.create({
+        id: 'new_slide',
+        parentId: 'new',
+        title: 'New Slide',
+      });
+      chrome.contextMenus.create({
+        id: 'new_form',
+        parentId: 'new',
+        title: 'New Form',
+      });
+  
+      chrome.contextMenus.create({
+        id: 'convert',
+        title: 'Convert',
+      });
+      chrome.contextMenus.create({
+        id: 'convert_to_preview',
+        parentId: 'convert',
+        title: 'To Preview',
+      });
+      chrome.contextMenus.create({
+        id: 'convert_to_edit',
+        parentId: 'convert',
+        title: 'To Edit',
+      });
+      chrome.contextMenus.create({
+        id: 'convert_to_copy',
+        parentId: 'convert',
+        title: 'To Copy',
+      });
+      chrome.contextMenus.create({
+        id: 'convert_to_template',
+        parentId: 'convert',
+        title: 'To Template',
+      });
+  
+      chrome.contextMenus.create({
+        id: 'download_link',
+        title: 'Download Link',
+      });
+      chrome.contextMenus.create({
+        id: 'download_pdf',
+        parentId: 'download_link',
+        title: 'PDF',
+      });
+    })
   });
 
   chrome.contextMenus.onClicked.addListener((item) => {
