@@ -1,6 +1,6 @@
 {
   chrome.runtime.onInstalled.addListener(() => {
-    chrome.contextMenus.removeAll(function() {
+    chrome.contextMenus.removeAll(function () {
       chrome.contextMenus.create({
         id: 'new',
         title: 'New',
@@ -25,7 +25,7 @@
         parentId: 'new',
         title: 'New Form',
       });
-  
+
       chrome.contextMenus.create({
         id: 'convert',
         title: 'Convert',
@@ -50,7 +50,7 @@
         parentId: 'convert',
         title: 'To Template',
       });
-  
+
       chrome.contextMenus.create({
         id: 'download_link',
         title: 'Download Link',
@@ -60,7 +60,7 @@
         parentId: 'download_link',
         title: 'PDF',
       });
-    })
+    });
   });
 
   chrome.contextMenus.onClicked.addListener((item) => {
@@ -88,7 +88,7 @@
     // Convert
     if (item.parentMenuItemId === 'convert') {
       if (!GoogleUrlRegex.test(item.pageUrl)) {
-        alert('This page cannot be converted.');
+        console.log('This page is not available for convert.');
         return;
       }
 
@@ -114,7 +114,7 @@
     // Download
     if (item.parentMenuItemId === 'download_link') {
       if (!GoogleUrlRegex.test(item.pageUrl)) {
-        alert('This page cannot be converted.');
+        console.log('This page is not available for download.');
         return;
       }
 
@@ -127,10 +127,10 @@
             .writeText(`https://docs.google.com/${service}/d/${fileId}/export?format=pdf`)
             .then(
               () => {
-                alert('Copied to clipboard!');
+                console.log('Copied to clipboard!');
               },
               () => {
-                alert('Failed to copy to clipboard!');
+                console.log('Failed to copy to clipboard!');
               }
             );
           break;
