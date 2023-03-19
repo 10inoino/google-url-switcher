@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "fmt": "prettier --write **/*.{js,json}",
+    "release": "bash release.sh"
+  },
+  "devDependencies": {
+    "prettier": "2.8.4"
+  }
+}

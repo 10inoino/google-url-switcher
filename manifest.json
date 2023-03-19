@@ -1,0 +1,13 @@
+{
+  "name": "Google URL Switcher",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Switch URL for Google Workspace services",
+  "background": {
+    "service_worker": "index.js"
+  },
+  "icons": {
+    "128": "128.png"
+  },
+  "permissions": ["contextMenus"]
+}
