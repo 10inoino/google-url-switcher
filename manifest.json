@@ -13,6 +13,5 @@
   "icons": {
     "128": "128.png"
   },
-  "permissions": ["contextMenus", "scripting"],
-  "host_permissions": ["<all_urls>"]
+  "permissions": ["contextMenus", "scripting"]
 }
