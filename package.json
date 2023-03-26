@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "fmt": "prettier --write **/*.{js,json}",
-    "release": "bash release.sh"
+    "fmt": "prettier --write **/*.{js,json,tsx,ts,css}",
+    "build:popup": "cd popup && yarn build",
+    "build": "yarn build:popup && bash build.sh",
+    "release": "yarn build && zip release.zip -r release"
   },
   "devDependencies": {
     "prettier": "2.8.4"
