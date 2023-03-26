@@ -1,5 +1,15 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
+import { MainView } from './MainVIew';
 
-export const App: React.VFC = () => {
-  return <div>Hello World!</div>
+function App() {
+  return (
+    <React.StrictMode>
+      <ChakraProvider>
+        <MainView />
+      </ChakraProvider>
+    </React.StrictMode>
+  );
 }
+
+export default App;

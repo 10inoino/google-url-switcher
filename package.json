@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "fmt": "prettier --write **/*.{js,json}",
+    "fmt": "prettier --write **/*.{js,json,tsx}",
     "release": "bash release.sh"
   },
   "devDependencies": {
