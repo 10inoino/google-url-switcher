@@ -9,7 +9,7 @@ import {
   SimpleGrid,
   Button,
 } from '@chakra-ui/react';
-import { convert, createNewPage, download, GoogleUrlRegex, service } from './chrome-ops';
+import { convert, createNewPage, download, GoogleUrlRegex } from './chrome-ops';
 
 export const MainView = () => {
   const [ isGooglePage, setGooglePage ] = useState<boolean>(false);
